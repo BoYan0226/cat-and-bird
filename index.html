@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cat and Bird</title>
+<style>
+  html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #a2a07b;
+  }
+  .background {
+    position: fixed;
+    inset: 0;
+  }
+  .painting {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: min(100vw, 140vh);
+    aspect-ratio: 1.4;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+  }
+  .triangle {
+    position: absolute;
+    inset: 0;
+  }
+  .texture {
+    position: absolute;
+    inset: 0;
+    background: url("textured-paper.png") repeat;
+    opacity: 0.28;
+    pointer-events: none;
+  }
+</style>
+</head>
+<body>
+<div class="background" aria-hidden="true">
+<div class="triangle" style="background:#536b63; clip-path:polygon(0% 0%, 22% 0%, 0% 47%);"></div>
+  <div class="triangle" style="background:#8e9d89; clip-path:polygon(0% 47%, 22% 0%, 17% 58%);"></div>
+  <div class="triangle" style="background:#b0b393; clip-path:polygon(0% 47%, 17% 58%, 0% 79%);"></div>
+  <div class="triangle" style="background:#637e73; clip-path:polygon(0% 79%, 17% 58%, 12% 100%);"></div>
+  <div class="triangle" style="background:#a4b09b; clip-path:polygon(0% 79%, 12% 100%, 0% 100%);"></div>
+  <div class="triangle" style="background:#82947f; clip-path:polygon(22% 0%, 17% 58%, 57% 36%);"></div>
+  <div class="triangle" style="background:#667f73; clip-path:polygon(22% 0%, 73% 0%, 57% 36%);"></div>
+  <div class="triangle" style="background:#4e695f; clip-path:polygon(73% 0%, 100% 0%, 86% 38%);"></div>
+  <div class="triangle" style="background:#a3af99; clip-path:polygon(100% 0%, 100% 48%, 86% 38%);"></div>
+  <div class="triangle" style="background:#7e9788; clip-path:polygon(100% 48%, 87% 76%, 86% 38%);"></div>
+  <div class="triangle" style="background:#526f65; clip-path:polygon(100% 48%, 100% 100%, 87% 76%);"></div>
+  <div class="triangle" style="background:#b1b79b; clip-path:polygon(87% 76%, 100% 100%, 68% 100%);"></div>
+  <div class="triangle" style="background:#96a58c; clip-path:polygon(17% 58%, 12% 100%, 51% 100%);"></div>
+  <div class="triangle" style="background:#6b8578; clip-path:polygon(17% 58%, 51% 100%, 57% 36%);"></div>
+  <div class="triangle" style="background:#8a9e89; clip-path:polygon(57% 36%, 51% 100%, 87% 76%);"></div>
+  <div class="triangle" style="background:#b9baa0; clip-path:polygon(51% 100%, 87% 76%, 68% 100%);"></div>
+  <div class="triangle" style="background:#94a28b; clip-path:polygon(73% 0%, 57% 36%, 86% 38%);"></div>
+  <div class="triangle" style="background:#78917e; clip-path:polygon(57% 36%, 86% 38%, 87% 76%);"></div>
+</div>
+<div class="painting" role="img" aria-label="用不同颜色与形状的三角形拼成的猫与鸟">
+  <div class="triangle" style="background:#bc8c58; clip-path:polygon(11% 4%, 50% 17%, 54% 40%);"></div>
+  <div class="triangle" style="background:#b98657; clip-path:polygon(50% 17%, 93% 4%, 54% 40%);"></div>
+  <div class="triangle" style="background:#c69a63; clip-path:polygon(11% 4%, 54% 40%, 8% 32%);"></div>
+  <div class="triangle" style="background:#ba824f; clip-path:polygon(93% 4%, 92% 33%, 54% 40%);"></div>
+  <div class="triangle" style="background:#d0ad76; clip-path:polygon(8% 31%, 54% 39%, 13% 84%);"></div>
+  <div class="triangle" style="background:#c5a16a; clip-path:polygon(54% 39%, 49% 75%, 13% 84%);"></div>
+  <div class="triangle" style="background:#c9a973; clip-path:polygon(54% 39%, 92% 32%, 87% 85%);"></div>
+  <div class="triangle" style="background:#bd935c; clip-path:polygon(54% 39%, 87% 85%, 57% 75%);"></div>
+  <div class="triangle" style="background:#d1ae7c; clip-path:polygon(13% 84%, 49% 74%, 28% 94%);"></div>
+  <div class="triangle" style="background:#b78b59; clip-path:polygon(28% 94%, 49% 74%, 75% 94%);"></div>
+  <div class="triangle" style="background:#c69d68; clip-path:polygon(49% 74%, 87% 85%, 75% 94%);"></div>
+
+  <div class="triangle" style="background:#b57549; clip-path:polygon(23% 9%, 50% 17%, 54% 39%);"></div>
+  <div class="triangle" style="background:#ad7046; clip-path:polygon(50% 17%, 82% 8%, 54% 39%);"></div>
+  <div class="triangle" style="background:#c58c5e; clip-path:polygon(31% 12%, 49% 17%, 44% 27%);"></div>
+  <div class="triangle" style="background:#b98159; clip-path:polygon(59% 15%, 78% 10%, 64% 27%);"></div>
+  <div class="triangle" style="background:#c9907c; clip-path:polygon(38% 23%, 66% 21%, 54% 39%);"></div>
+  <div class="triangle" style="background:#b96c7a; clip-path:polygon(42% 24%, 61% 21%, 56% 35%);"></div>
+  <div class="triangle" style="background:#c18086; clip-path:polygon(42% 24%, 56% 35%, 48% 33%);"></div>
+  <div class="triangle" style="background:#a95e6a; clip-path:polygon(56% 24%, 65% 23%, 56% 35%);"></div>
+
+  <div class="triangle" style="background:#dbcfaa; clip-path:polygon(11% 4%, 8% 31%, 51% 37%);"></div>
+  <div class="triangle" style="background:#c7bd97; clip-path:polygon(11% 4%, 30% 20%, 8% 31%);"></div>
+  <div class="triangle" style="background:#e1d5b1; clip-path:polygon(12% 9%, 11% 27%, 35% 26%);"></div>
+  <div class="triangle" style="background:#b6a57e; clip-path:polygon(8% 31%, 35% 26%, 51% 37%);"></div>
+  <div class="triangle" style="background:#d6caa4; clip-path:polygon(93% 4%, 57% 37%, 92% 32%);"></div>
+  <div class="triangle" style="background:#e0d2ab; clip-path:polygon(91% 10%, 70% 27%, 90% 29%);"></div>
+  <div class="triangle" style="background:#bdaf88; clip-path:polygon(70% 27%, 57% 37%, 92% 32%);"></div>
+
+  <div class="triangle" style="background:#b8794e; clip-path:polygon(11% 44%, 27% 56%, 15% 77%);"></div>
+  <div class="triangle" style="background:#c58b58; clip-path:polygon(11% 44%, 34% 48%, 27% 56%);"></div>
+  <div class="triangle" style="background:#d4b780; clip-path:polygon(27% 56%, 49% 49%, 47% 72%);"></div>
+  <div class="triangle" style="background:#cfa773; clip-path:polygon(15% 77%, 27% 56%, 47% 72%);"></div>
+  <div class="triangle" style="background:#ab714b; clip-path:polygon(79% 53%, 90% 44%, 86% 76%);"></div>
+  <div class="triangle" style="background:#c78f5f; clip-path:polygon(66% 49%, 90% 44%, 79% 53%);"></div>
+  <div class="triangle" style="background:#d4b581; clip-path:polygon(59% 48%, 79% 53%, 60% 71%);"></div>
+  <div class="triangle" style="background:#ca9c67; clip-path:polygon(60% 71%, 79% 53%, 86% 76%);"></div>
+
+  <div class="triangle" style="background:#7e7957; clip-path:polygon(8% 31%, 30% 27%, 54% 39%);"></div>
+  <div class="triangle" style="background:#847955; clip-path:polygon(8% 31%, 54% 39%, 30% 45%);"></div>
+  <div class="triangle" style="background:#d9d1aa; clip-path:polygon(9% 31.5%, 29% 28%, 53% 39%);"></div>
+  <div class="triangle" style="background:#c3c39d; clip-path:polygon(9% 31.5%, 53% 39%, 30% 43.5%);"></div>
+  <div class="triangle" style="background:#ece0b7; clip-path:polygon(11% 32%, 25% 30%, 23% 39%);"></div>
+  <div class="triangle" style="background:#6d9b8d; clip-path:polygon(29% 28%, 23.5% 39%, 31% 44%);"></div>
+  <div class="triangle" style="background:#8eac94; clip-path:polygon(29% 28%, 36% 35%, 31% 44%);"></div>
+  <div class="triangle" style="background:#345c4b; clip-path:polygon(29.5% 28.8%, 27.5% 37%, 31% 43%);"></div>
+  <div class="triangle" style="background:#426956; clip-path:polygon(29.5% 28.8%, 32.5% 36%, 31% 43%);"></div>
+  <div class="triangle" style="background:#ddd3ac; clip-path:polygon(36% 35%, 52% 39%, 33% 42%);"></div>
+
+  <div class="triangle" style="background:#7b7754; clip-path:polygon(54% 39%, 77% 28%, 92% 32%);"></div>
+  <div class="triangle" style="background:#8a7f58; clip-path:polygon(54% 39%, 92% 32%, 74% 46%);"></div>
+  <div class="triangle" style="background:#d7cfa6; clip-path:polygon(55% 39%, 77% 29%, 91% 32.5%);"></div>
+  <div class="triangle" style="background:#bec49f; clip-path:polygon(55% 39%, 91% 32.5%, 74% 44.5%);"></div>
+  <div class="triangle" style="background:#e2d8af; clip-path:polygon(82% 32%, 90% 32.5%, 79% 41%);"></div>
+  <div class="triangle" style="background:#80a291; clip-path:polygon(77% 29%, 68% 37%, 74% 45%);"></div>
+  <div class="triangle" style="background:#649384; clip-path:polygon(77% 29%, 81% 36%, 74% 45%);"></div>
+  <div class="triangle" style="background:#315747; clip-path:polygon(76.7% 30%, 73% 37%, 74.2% 44%);"></div>
+  <div class="triangle" style="background:#3b6250; clip-path:polygon(76.7% 30%, 78% 36%, 74.2% 44%);"></div>
+
+  <div class="triangle" style="background:#a97c50; clip-path:polygon(54% 39%, 48.5% 74%, 57.5% 74%);"></div>
+  <div class="triangle" style="background:#d8bb88; clip-path:polygon(54% 40%, 51% 72.5%, 57% 74%);"></div>
+  <div class="triangle" style="background:#c49a6a; clip-path:polygon(54% 40%, 49% 74%, 51% 72.5%);"></div>
+  <div class="triangle" style="background:#b9747b; clip-path:polygon(50% 74%, 60% 93%, 44% 93%);"></div>
+  <div class="triangle" style="background:#cd9991; clip-path:polygon(56% 74%, 60% 93%, 51% 90%);"></div>
+  <div class="triangle" style="background:#ddd0a8; clip-path:polygon(49% 74%, 16% 91%, 47% 91%);"></div>
+  <div class="triangle" style="background:#95a78c; clip-path:polygon(49% 74%, 20% 89%, 33% 85%);"></div>
+  <div class="triangle" style="background:#b5bc96; clip-path:polygon(49% 74%, 33% 85%, 42% 83%);"></div>
+  <div class="triangle" style="background:#d4cba5; clip-path:polygon(57% 74%, 59% 91%, 88% 92%);"></div>
+  <div class="triangle" style="background:#7d9c88; clip-path:polygon(57% 74%, 73% 88%, 81% 89%);"></div>
+  <div class="triangle" style="background:#a9b291; clip-path:polygon(57% 74%, 68% 81%, 81% 89%);"></div>
+
+  <div class="triangle" style="background:#b74949; clip-path:polygon(49% 73%, 53% 75%, 53% 81%);"></div>
+  <div class="triangle" style="background:#a94449; clip-path:polygon(53% 75%, 57% 73.5%, 53% 81%);"></div>
+  <div class="triangle" style="background:#c15c55; clip-path:polygon(49% 73%, 52% 72.5%, 53% 75%);"></div>
+  <div class="triangle" style="background:#b85452; clip-path:polygon(53% 75%, 55.5% 72.5%, 57% 73.5%);"></div>
+  <div class="triangle" style="background:#8a6b51; clip-path:polygon(53% 81%, 48% 91%, 48.7% 90.7%);"></div>
+  <div class="triangle" style="background:#967254; clip-path:polygon(53% 81%, 57.3% 91%, 58% 91.5%);"></div>
+  <div class="triangle" style="background:#9f785e; clip-path:polygon(48% 91%, 58% 91.5%, 53% 92%);"></div>
+  <div class="triangle" style="background:#8c7e58; clip-path:polygon(49% 74%, 4% 94%, 5% 94%);"></div>
+  <div class="triangle" style="background:#9b875f; clip-path:polygon(49% 75.5%, 10% 97%, 11% 96.9%);"></div>
+  <div class="triangle" style="background:#8d7b54; clip-path:polygon(57% 74%, 96% 94%, 95% 94%);"></div>
+  <div class="triangle" style="background:#9e8961; clip-path:polygon(57% 75.5%, 91% 97%, 90% 96.9%);"></div>
+
+  <div class="triangle" style="background:#879478; clip-path:polygon(39% 22%, 44% 26%, 45% 24%);"></div>
+  <div class="triangle" style="background:#a75c65; clip-path:polygon(44% 24%, 60% 22%, 52% 29%);"></div>
+  <div class="triangle" style="background:#bb7476; clip-path:polygon(44% 24%, 52% 23%, 52% 29%);"></div>
+  <div class="triangle" style="background:#9a5960; clip-path:polygon(52% 29%, 60% 22%, 57% 27%);"></div>
+  <div class="triangle" style="background:#c0a17b; clip-path:polygon(60% 17%, 58% 24%, 64% 21%);"></div>
+  <div class="triangle" style="background:#d2b58a; clip-path:polygon(60% 17%, 64% 21%, 65.5% 21.5%);"></div>
+  <div class="triangle" style="background:#635e45; clip-path:polygon(61% 18.5%, 61.6% 19.4%, 60.8% 19.5%);"></div>
+  <div class="triangle" style="background:#8e674f; clip-path:polygon(49% 28%, 47.8% 33%, 48.3% 32.8%);"></div>
+  <div class="triangle" style="background:#976b52; clip-path:polygon(53% 28.5%, 51.8% 33.4%, 52.3% 33.2%);"></div>
+
+</div>
+<div class="texture" aria-hidden="true"></div>
+</body>
+</html>
+
+
+
+
+
+
